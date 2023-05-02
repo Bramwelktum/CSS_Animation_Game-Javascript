@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animation Project</title>
+	<style type="text/css">
+		.animation {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			position: absolute;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+
+		.animation.green {
+			background-color: #4CAF50;
+			animation-name: bounce-green;
+		}
+
+		.animation.red {
+			background-color: #f44336;
+			animation-name: bounce-red;
+		}
+
+		.animation.blue {
+			background-color: #2196F3;
+			animation-name: bounce-blue;
+		}
+
+		@keyframes bounce-green {
+			0%, 100% {top: 0;}
+			50% {top: calc(100vh - 50px);}
+		}
+
+		@keyframes bounce-red {
+			0%, 100% {bottom: 0;}
+			50% {bottom: calc(100vh - 50px);}
+		}
+
+		@keyframes bounce-blue {
+			0%, 100% {top: 0; left: 0;}
+			50% {top: calc(100vh - 50px); left: calc(100vw - 50px);}
+		}
+	</style>
+</head>
+<body>
+	<div class="animation green"></div>
+	<div class="animation red"></div>
+	<div class="animation blue"></div>
+</body>
+</html>
+
